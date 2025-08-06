@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: whoami-clusterlab-cc
+spec:
+  secretName: whoami-clusterlab-cc-tls
+  dnsNames:
+    - whoami.azure.clusterlab.cc
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
